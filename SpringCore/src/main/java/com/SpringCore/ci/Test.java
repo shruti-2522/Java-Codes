@@ -10,6 +10,10 @@ public class Test {
 		ApplicationContext context=new  ClassPathXmlApplicationContext("com/SpringCore/ci/ciconfig.xml");
 	    Pesron p =(Pesron) context.getBean("person1");
 	    System.out.println(p);
+	    
+	    Addition a=(Addition) context.getBean("add");
+	   
+	    System.out.println(a);
 	   
 	}
 
