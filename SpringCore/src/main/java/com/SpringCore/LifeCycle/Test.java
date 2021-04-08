@@ -17,6 +17,11 @@ public class Test {
 	    System.out.println("+++++++++++++++++");
 	    Pepsi p=(Pepsi) context.getBean("p1");
 	    System.out.println(p);
+	    
+	    
+	    System.out.println("+++++++++++++++++++++");
+	    Example e=(Example) context.getBean("e1");
+	    System.out.println(e);
 	}
 	
 }

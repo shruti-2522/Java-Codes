@@ -6,7 +6,9 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
  http://www.springframework.org/schema/beans/spring-beans.xsd 
  http://www.springframework.org/schema/context
- http://www.springframework.org/schema/context.xsd">
+ http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+ <context:annotation-config />
  
  <bean class="com.SpringCore.LifeCycle.Samosa" name="s1" init-method="init" destroy-method="destroy">
  <property name="price" value="10"  />
@@ -15,6 +17,10 @@
  
  <bean class="com.SpringCore.LifeCycle.Pepsi" name="p1">
  <property name="pprice" value="20" />
+ </bean>
+ 
+ <bean class="com.SpringCore.LifeCycle.Example" name="e1">
+ <property name="subject" value="Java" />
  </bean>
 
 
