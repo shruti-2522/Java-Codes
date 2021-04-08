@@ -13,6 +13,10 @@ public class Test {
 	    
 	    //Register shutdoown method:
 	    context.registerShutdownHook();
+	    
+	    System.out.println("+++++++++++++++++");
+	    Pepsi p=(Pepsi) context.getBean("p1");
+	    System.out.println(p);
 	}
 	
 }
