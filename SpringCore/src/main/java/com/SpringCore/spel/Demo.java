@@ -5,16 +5,31 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Demo {
+	
 	@Value("#{10+10}")
 	private int x;
 	@Value("#{10*4}")
 	private int y;
+    //Static method
 	@Value("#{T (java.lang.Math).sqrt(25) }")
 	private double z;
+	//Static variable
 	@Value("#{T(java.lang.Math).PI}")
 	private double e;
+	//Object
 	@Value("#{new java.lang.String('Shruti Amrutkar')}")
 	private String name;
+	
+	@Value("#{8>5}")
+	private boolean isActive;
+
+	public boolean isActive() {
+		return isActive;
+	}
+
+	public void setActive(boolean isActive) {
+		this.isActive = isActive;
+	}
 
 	public String getName() {
 		return name;
@@ -58,7 +73,8 @@ public class Demo {
 
 	@Override
 	public String toString() {
-		return "Demo [x=" + x + ", y=" + y + ", z=" + z + ", e=" + e + ", name=" + name + "]";
+		return "Demo [x=" + x + ", y=" + y + ", z=" + z + ", e=" + e + ", name=" + name + ", isActive=" + isActive
+				+ "]";
 	}
 
 }
