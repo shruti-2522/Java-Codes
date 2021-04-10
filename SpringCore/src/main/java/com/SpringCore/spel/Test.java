@@ -13,10 +13,10 @@ public class Test {
 
 		System.out.println(d1);
 
-		SpelExpressionParser temp = new SpelExpressionParser();
-
-		org.springframework.expression.Expression ex = temp.parseExpression("22+55");
-		System.out.println(ex.getValue());
+//		SpelExpressionParser temp = new SpelExpressionParser();
+//
+//		org.springframework.expression.Expression ex = temp.parseExpression("22+55");
+//		System.out.println(ex.getValue());
 
 	}
 
