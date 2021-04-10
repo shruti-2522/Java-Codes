@@ -21,6 +21,7 @@ http://www.springframework.org/schema/util/spring-util.xsd">
 <value>Mumbai</value>
 </util:list>
 
+<bean class="com.SpringCore.sterotype.Teacher" name="teacher" scope="prototype"/>
 
 
 </beans>
