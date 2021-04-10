@@ -8,7 +8,7 @@ public class Test {
 		ApplicationContext context=new ClassPathXmlApplicationContext("com/SpringCore/sterotype/stereoconfig.xml");
 		Student s=context.getBean("student",Student.class);
 		System.out.println(s);
-		
+		System.out.println(s.getAddr());
 	}
 	
 
