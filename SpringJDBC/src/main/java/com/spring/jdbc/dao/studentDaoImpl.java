@@ -1,5 +1,7 @@
 package com.spring.jdbc.dao;
 
+import java.util.List;
+
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
@@ -46,7 +48,7 @@ public class studentDaoImpl implements studentDao {
 
 	@Override
 	public Student getStudent(int studentId) {
-		// Select Query
+		// Select Single Data
 		String query3 = "select * from student where id=?";
 
 		// RowMapper is Inteface
@@ -54,6 +56,14 @@ public class studentDaoImpl implements studentDao {
 		RowMapper<Student> rowMapper = new RowMapperImpl();
 		Student student = this.jdbcTemplate.queryForObject(query3, rowMapper, studentId);
 
+		return student;
+	}
+
+	@Override
+	public List<Student> getAllstudent() {
+		//Select Multiple Data
+		String query4="select * from student";
+		List<Student> student=this.jdbcTemplate.query(query4,new RowMapperImpl());
 		return student;
 	}
 
