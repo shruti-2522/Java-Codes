@@ -14,7 +14,7 @@ public class App {
 
 	public static void main(String[] args) {
 
-		// Spring JDBC
+		// Spring JDBC("Using annotation and Java")
 		ApplicationContext context = new AnnotationConfigApplicationContext(jdbcConfig.class);
 		JdbcTemplate temp = context.getBean("jdbcTemplate", JdbcTemplate.class);
 
@@ -25,18 +25,17 @@ public class App {
 		 * //Fire Query: int r=temp.update(query,4,"Pradhunya Shewale","Tehre");
 		 * System.out.println("Number Of Record Inserted.."+ r);
 		 */
-
-		studentDao studentDao = context.getBean("studentDao", studentDao.class);
-
-		// INSERT
-
-		Student student = new Student();
-		student.setId(1);
-		student.setName("Shruti Amrutkar");
-		student.setCity("Wadne");
-
-		int result = studentDao.insert(student);
-		System.out.println("Data Inserted..." + result);
+		
+		 studentDao studentDao = context.getBean("studentDao", studentDao.class);
+		 /* 
+		 * // INSERT
+		 * 
+		 * Student student = new Student(); student.setId(1);
+		 * student.setName("Shruti Amrutkar"); student.setCity("Wadne");
+		 * 
+		 * int result = studentDao.insert(student);
+		 * System.out.println("Data Inserted..." + result);
+		 */
 
 		// UPDATE
 		/*
