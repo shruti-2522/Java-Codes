@@ -1,0 +1,18 @@
+SPRING MVS APLICATION CREATE STEPS:
+
+1.CREATE THE DISPATCHER SERVELET IN WEB.XML.---->FRONT CONTROLLER
+2.CREATE SPRINNG CONFIGURATION FILE.
+3.CONFIGURE VIEW RESOLVER.
+4.CREATE CONTROLLER
+5.CREATE A VIEW to show( PAGE)
+
+
+****SENDING DATA FROM CONTROLLER TO VIEW***********
+1.MODEL()-addAttribute(String key,Object value);-add and GET -request.getAttribute();
+2.ModelAndView-addObject(String key,Object value);
+
+
+MODELANDVIEW:
+
+CONTROLLER----MODEKANDVIEW---(VIEW)(jsp)
+data(primitive type value,objectes(student,person,emp),collect(set,map)

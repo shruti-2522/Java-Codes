@@ -1,11 +1,13 @@
 package springmvc.controller;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HomeController {
@@ -13,16 +15,16 @@ public class HomeController {
 	@RequestMapping("/home")
 	public String home(Model model) {
 		System.out.println("This is Home Url..");
-		model.addAttribute("name","Shruti Amrutkar");
-		model.addAttribute("id",1);
-		
-		List<String> frnds=new ArrayList<String>();
+		model.addAttribute("name", "Shruti Amrutkar");
+		model.addAttribute("id", 1);
+
+		List<String> frnds = new ArrayList<String>();
 		frnds.add("Sairaj");
 		frnds.add("Niki");
 		frnds.add("Hitesh");
 		frnds.add("Rushali");
-		
-		model.addAttribute("f",frnds);
+
+		model.addAttribute("f", frnds);
 		return "index";
 	}
 
@@ -39,9 +41,22 @@ public class HomeController {
 	}
 
 	@RequestMapping("/help")
-	public String help() {
+	public ModelAndView help() {
 		System.out.println("This is Help controller..");
-		return "help";
+
+		// Create model and view object:
+		ModelAndView m1 = new ModelAndView();
+
+		m1.addObject("name", "shruti");
+		m1.addObject("id", 1);
+		
+		LocalDateTime now=LocalDateTime.now();
+		m1.addObject("time", now);
+
+		// setting the view name
+		m1.setViewName("help");
+
+		return m1;
 	}
 
 }
