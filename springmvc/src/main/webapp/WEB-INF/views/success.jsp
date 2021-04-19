@@ -10,9 +10,10 @@
 </head>
 <body>
 
-	<h1>Welcome,${name }</h1>
-	<h1>Your email address is ${email }</h1>
-	<h1>Passoword is ${pass }</h1>
+
+	<h1>Welcome,${user.txtname }</h1>
+	<h1>Your email address is ${user.txtemail }</h1>
+	<h1>Passoword is ${user.txtpass }</h1>
 
 
 
