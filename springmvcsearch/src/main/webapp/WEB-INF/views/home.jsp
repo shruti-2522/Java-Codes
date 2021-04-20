@@ -16,22 +16,23 @@
 </head>
 <body>
 	<div class="container">
-		<div class="card mx-auto mt-5 bg-primary" style="width:50%;">
+		<div class="card mx-auto mt-5 bg-primary" style="width: 50%;">
 			<div class="card-body py-5">
-			
-			<h3 class="text-center text-white">MY SEARCH</h3>
-			<form action="search" method="get"  class="mt-3">
-			
-			<div class="form-group">
-			<input type="text" name="txtsearch" class="form-control" placeholder="Enter Your Keyword....">
-			</div>
-			
-			<br>
-			<div class="container text-center">
-			<button class="btn btn-outline-light">Search</button>
-			</div>
-			</form>
-			
+
+				<h3 class="text-center text-white">MY SEARCH</h3>
+				<form action="search" method="get" class="mt-3">
+
+					<div class="form-group">
+						<input type="text" name="txtsearch" class="form-control"
+							placeholder="Enter Your Keyword....">
+					</div>
+
+					<br>
+					<div class="container text-center">
+						<button class="btn btn-outline-light">Search</button>
+					</div>
+				</form>
+
 			</div>
 
 		</div>
