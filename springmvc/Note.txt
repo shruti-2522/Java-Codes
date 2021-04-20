@@ -16,3 +16,21 @@ MODELANDVIEW:
 
 CONTROLLER----MODEKANDVIEW---(VIEW)(jsp)
 data(primitive type value,objectes(student,person,emp),collect(set,map)
+
+*****HOW TO REDIRECT IN SPRING MVC*******
+1.HttpservletResponse
+2.Redirect prefix
+ public String handler()
+{
+ return "redirect:/url";
+}
+
+3.RedirectView
+
+ public RedirectView handler()
+{
+ RedirectView r=new RedirectView();
+ r.setUrl("url");
+return r;
+
+}
