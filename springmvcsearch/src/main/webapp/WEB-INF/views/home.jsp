@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!doctype html>
 <html lang="en">
 <head>
@@ -11,10 +12,13 @@
 	rel="stylesheet"
 	integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
 	crossorigin="anonymous">
+	<link href="<c:url value="/resources/css/style.css" />" >
+	<script src="<c:url  value="/resources/js/script.js" />"></script>
 
 <title>Search Engine</title>
 </head>
 <body>
+<img alt="my image" src="<c:url value="/resources/image/shruti.jpg"/>">
 	<div class="container">
 		<div class="card mx-auto mt-5 bg-primary" style="width: 50%;">
 			<div class="card-body py-5">
