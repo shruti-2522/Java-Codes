@@ -13,10 +13,10 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 	<context:component-scan
 		base-package="springmvcsearch" />
-
+	<mvc:annotation-driven />
 	<mvc:resources location="/WEB-INF/resources/"
 		mapping="/resources/**"></mvc:resources>
-		<mvc:annotation-driven />
+
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver"
 		name="viewResolver">
@@ -24,5 +24,10 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 		<property name="suffix" value=".jsp"></property>
 
 	</bean>
+
+	<!--Configuring Multipart Resolver -->
+	<bean
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver"
+		name="multipartResolver"></bean>
 
 </beans>
