@@ -1,6 +1,5 @@
 package springmvcsearch;
 
-
 import java.util.Date;
 import java.util.List;
 
@@ -12,14 +11,20 @@ public class Student {
 	private String txtradio;
 	private String txttype;
 
-	@Override
-	public String toString() {
-		return "Student [txtname=" + txtname + ", txtid=" + txtid + ", txtdate=" + txtdate + ", txtcourse=" + txtcourse
-				+ ", txtradio=" + txtradio + ", txttype=" + txttype + "]";
-	}
+	private Address addr;
 
 	public String getTxtname() {
 		return txtname;
+	}
+
+	
+
+	public Address getAddr() {
+		return addr;
+	}
+
+	public void setAddr(Address addr) {
+		this.addr = addr;
 	}
 
 	public void setTxtname(String txtname) {
@@ -64,6 +69,11 @@ public class Student {
 
 	public void setTxttype(String txttype) {
 		this.txttype = txttype;
+	}
+	@Override
+	public String toString() {
+		return "Student [txtname=" + txtname + ", txtid=" + txtid + ", txtdate=" + txtdate + ", txtcourse=" + txtcourse
+				+ ", txtradio=" + txtradio + ", txttype=" + txttype + ", addr=" + addr + "]";
 	}
 
 }

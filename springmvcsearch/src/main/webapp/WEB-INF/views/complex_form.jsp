@@ -17,7 +17,7 @@
 <body class="" style="background-color: rgb(255, 130, 255);">
 	<div class="container mt-4">
 		<div class="row">
-			<div class="col-md-6 offset-md-3">
+			<div class="col-md-8 offset-md-2">
 
 				<div class="card">
 					<div class="card-body">
@@ -86,6 +86,26 @@
 										<option value="normal_student">Normal Student</option>
 
 									</select>
+								</div>
+								<br>
+								<br>
+
+								<div class="card">
+									<div class="card-body">
+										<p>
+											<b>Your Address</b>
+										</p>
+										<div class="form-group">
+											<input type="text" class="form-control" name="addr.street"
+												placeholder="Enter Street" />
+										</div>
+										<br>
+										<div class="form-group">
+											<input type="text" class="form-control" name="addr.city"
+												placeholder="Enter City" />
+										</div>
+
+									</div>
 								</div>
 
 								<br>
