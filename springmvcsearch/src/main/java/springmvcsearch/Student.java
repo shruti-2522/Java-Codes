@@ -17,8 +17,6 @@ public class Student {
 		return txtname;
 	}
 
-	
-
 	public Address getAddr() {
 		return addr;
 	}
@@ -70,6 +68,7 @@ public class Student {
 	public void setTxttype(String txttype) {
 		this.txttype = txttype;
 	}
+
 	@Override
 	public String toString() {
 		return "Student [txtname=" + txtname + ", txtid=" + txtid + ", txtdate=" + txtdate + ", txtcourse=" + txtcourse

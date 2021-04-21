@@ -1,3 +1,4 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!doctype html>
 <html lang="en">
 <head>
@@ -24,6 +25,11 @@
 						<h3 class="text-center">
 							<b>COMPLEX FORM</b>
 						</h3>
+
+						<div class="alert alert-success" role="alert">
+							<form:errors path="student.*"></form:errors>
+
+						</div>
 						<form action="handlerForm" method="post">
 
 							<div class="form-group">
@@ -87,8 +93,7 @@
 
 									</select>
 								</div>
-								<br>
-								<br>
+								<br> <br>
 
 								<div class="card">
 									<div class="card-body">
