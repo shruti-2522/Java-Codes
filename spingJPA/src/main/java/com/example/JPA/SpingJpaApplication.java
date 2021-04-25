@@ -68,11 +68,37 @@ public class SpingJpaApplication {
 		/*
 		 * itr.forEach(user ->{ System.out.println(user); });
 		 */
+		/*
+		 * // Delete user userRepository.deleteById(1); System.out.println("Deleted..");
+		 */
 
-		// Delete user
-		userRepository.deleteById(1);
-		System.out.println("Deleted..");
+		/*
+		 * List<User> f1 = userRepository.findByName("Vrusshali Surywannshi");
+		 * System.out.println(f1);
+		 */
+
+		/*
+		 * List<User> f2=userRepository.findByNameAndCity("Niki", "Pachora");
+		 * System.out.println(f2);
+		 */
+
+		List<User> alluser = userRepository.getAllUser();
+		alluser.forEach(e -> {
+			System.out.println(e);
+		});
+
+		System.out.println("----------------------------------------");
+		
+		List<User> u1 = userRepository.getUserByName("Niki","Pachora");
+		u1.forEach(e -> {
+			System.out.println(e);
+		});
+		
+		System.out.println("___________________________________");
+		
+	     userRepository.getUsers().forEach(e->{
+			System.out.println(e);
+		});
 
 	}
-
 }
