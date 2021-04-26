@@ -3,6 +3,7 @@ package com.example.api.services;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import org.springframework.stereotype.Component;
 
@@ -52,4 +53,19 @@ public class BookService {
 
 		}).collect(Collectors.toList());
 	}*/
+	
+	
+	//Update the book
+	public void updateBook(Book book,int id)
+	{
+	books=books.stream().map(b->{
+			if(b.getBid()==id)
+			{
+				b.setBname(book.getBname());
+				b.setBprice(book.getBprice());
+			}
+			return b;
+		}).collect(Collectors.toList());
+	}
+	
 }
