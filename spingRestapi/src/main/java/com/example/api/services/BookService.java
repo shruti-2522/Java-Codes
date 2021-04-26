@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import com.exmple.api.entities.Book;
 import com.fasterxml.jackson.annotation.JsonTypeInfo.Id;
@@ -27,8 +28,15 @@ public class BookService {
 
 	// get Single Book By id
 	public Book getBookById(int id) {
+		
 		Book b2 = null;
+		try
+		{
 		b2 = books.stream().filter(e -> e.getBid() == id).findFirst().get();
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
 		return b2;
 	}
 
