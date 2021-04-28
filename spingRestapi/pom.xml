@@ -8,7 +8,7 @@
 		<version>2.4.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.examle.api</groupId>
+	<groupId>com.Restapi.book</groupId>
 	<artifactId>spingRestapi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spingRestapi</name>
@@ -17,6 +17,7 @@
 		<java.version>11</java.version>
 	</properties>
 	<dependencies>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
