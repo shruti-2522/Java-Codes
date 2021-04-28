@@ -1,10 +1,12 @@
 package com.Restapi.book.entities;
 
 import javax.annotation.Generated;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -15,7 +17,11 @@ public class Book {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int bid;
 	private String bname;
-	private String author;
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	private Author author;
+
+
 
 	@Override
 	public String toString() {
@@ -38,11 +44,11 @@ public class Book {
 		this.bname = bname;
 	}
 
-	public String getAuthor() {
+	public Author getAuthor() {
 		return author;
 	}
 
-	public void setAuthor(String author) {
+	public void setAuthor(Author author) {
 		this.author = author;
 	}
 
@@ -51,7 +57,7 @@ public class Book {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Book(int bid, String bname, String author) {
+	public Book(int bid, String bname, Author author) {
 		super();
 		this.bid = bid;
 		this.bname = bname;
