@@ -5,6 +5,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Entity
 public class Author {
@@ -15,6 +18,27 @@ public class Author {
 	private String fname;
 	private String lname;
 	private String lang;
+	
+	@OneToOne(mappedBy = "author")
+	@JsonBackReference
+    private Book book;
+	
+	public Book getBook() {
+		return book;
+	}
+
+	public Author(int aid, String fname, String lname, String lang, Book book) {
+		super();
+		this.aid = aid;
+		this.fname = fname;
+		this.lname = lname;
+		this.lang = lang;
+		this.book = book;
+	}
+
+	public void setBook(Book book) {
+		this.book = book;
+	}
 
 	@Override
 	public String toString() {
@@ -26,13 +50,8 @@ public class Author {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Author(int aid, String fname, String lname, String lang) {
-		super();
-		this.aid = aid;
-		this.fname = fname;
-		this.lname = lname;
-		this.lang = lang;
-	}
+	
+	
 
 	public int getAid() {
 		return aid;
