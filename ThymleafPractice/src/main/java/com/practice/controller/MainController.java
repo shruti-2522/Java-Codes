@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -33,6 +34,18 @@ public class MainController {
 		m.addAttribute("name",list);
 		
 		return "itterate";
+	}
+	
+	//Handler for conditional statement:
+	@GetMapping("/conditional")
+	public String conditional(Model m)
+	{
+		m.addAttribute("isActive",true);
+		m.addAttribute("Gender", "M");
+		
+		List<Integer> list=List.of(10,20,30,40,50,60);
+		m.addAttribute("Mylist", list);
+		return "condition";
 	}
 
 }
