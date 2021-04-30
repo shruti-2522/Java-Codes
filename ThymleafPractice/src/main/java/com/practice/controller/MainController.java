@@ -1,5 +1,6 @@
 package com.practice.controller;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -51,6 +52,8 @@ public class MainController {
 	@GetMapping("/service")
 	public String service(Model m)
 	{
+		m.addAttribute("title","I like to do programming..");
+		m.addAttribute("subtitle",LocalDateTime.now().toString());
 		return "service";
 	}
 
