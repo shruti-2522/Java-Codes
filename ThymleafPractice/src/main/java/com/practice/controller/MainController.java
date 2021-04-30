@@ -47,5 +47,11 @@ public class MainController {
 		m.addAttribute("Mylist", list);
 		return "condition";
 	}
+	
+	@GetMapping("/service")
+	public String service(Model m)
+	{
+		return "service";
+	}
 
 }
