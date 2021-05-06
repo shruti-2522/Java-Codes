@@ -14,7 +14,7 @@ SPRING MVS APLICATION CREATE STEPS:
 
 MODELANDVIEW:
 
-CONTROLLER----MODEKANDVIEW---(VIEW)(jsp)
+CONTROLLER----MODEL ANDVIEW---(VIEW)(jsp)
 data(primitive type value,objectes(student,person,emp),collect(set,map)
 
 *****HOW TO REDIRECT IN SPRING MVC*******

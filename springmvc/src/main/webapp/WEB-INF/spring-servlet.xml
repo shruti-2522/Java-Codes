@@ -11,8 +11,7 @@ http://www.springframework.org/schema/context/spring-context.xsd
 http://www.springframework.org/schema/tx
 http://www.springframework.org/schema/tx/spring-tx.xsd">
 	<tx:annotation-driven />
-
-	<context:component-scan base-package="springmvc" />
+<context:component-scan base-package="springmvc" />
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver"
 		name="viewResolver">
@@ -62,7 +61,7 @@ http://www.springframework.org/schema/tx/spring-tx.xsd">
 		name="hibernateTemplate">
 		<property name="sessionFactory" ref="factory"></property>
 	</bean>
-	
+
 	<bean
 		class="org.springframework.orm.hibernate5.HibernateTransactionManager"
 		name="transactionManager">
